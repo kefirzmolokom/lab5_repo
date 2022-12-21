@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "lab5.h"
 
 int main()
