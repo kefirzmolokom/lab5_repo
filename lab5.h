@@ -1,9 +1,10 @@
 #include <iostream>
+#include <string>
 
 class TimeConverter
 {
 public:
-    void outputConvertedTime(std::string time)
+    void output_converted_time(std::string time)
     {
         int hh;
         int mm;
@@ -13,32 +14,32 @@ public:
         mm = std::stoi(time.substr(3, 2));
         ss = std::stoi(time.substr(6, 2));
 
-        outputConvertedTime(hh, mm, ss);
+        output_converted_time(hh, mm, ss);
     }
 
-    void outputConvertedTime(int hh, int mm, int ss)
+    void output_converted_time(int hh, int mm, int ss)
     {
         int seconds;
-        int secInHour = 3600;
-        int secInMinute = 60;
-        seconds = hh * secInHour + mm * secInMinute + ss;
+        int seconds_in_hour = 3600;
+        int seconds_in_minute = 60;
+        seconds = hh * seconds_in_hour + mm * seconds_in_minute + ss;
 
         std::cout << seconds << std::endl;
     }
-    void outputConvertedTime(int seconds)
+    void output_converted_time(int seconds)
     {
         int hh;
         int mm;
         int ss;
-        int secInHour = 3600;
-        int secInMinute = 60;
+        int seconds_in_hour = 3600;
+        int seconds_in_minute = 60;
         char time[9];
 
-        hh = seconds / secInHour;
-        seconds -= hh * secInHour;
+        hh = seconds / seconds_in_hour;
+        seconds -= hh * seconds_in_hour;
 
-        mm = seconds / secInMinute;
-        seconds -= mm * secInMinute;
+        mm = seconds / seconds_in_minute;
+        seconds -= mm * seconds_in_minute;
 
         ss = seconds;
 

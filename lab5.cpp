@@ -1,29 +1,30 @@
 #include <iostream>
-#include <lab5.h>
+#include <string>
+#include "lab5.h"
 
 int main()
 {
-    TimeConverter timeconverter;
+    TimeConverter TimeConverter;
     int seconds;
     std::string time;
-    int UserInput;
+    int user_input;
 
     std::cout << "from hh:mm:ss to seconds or vice versa?"
               << std::endl
               << "print 1 for first option and 0 for second: ";
-    std::cin >> UserInput;
+    std::cin >> user_input;
 
-    if (UserInput == 1)
+    if (user_input == 1)
     {
         std::cout << "now input hh:mm:ss -> ";
         std::cin >> time;
-        timeconverter.outputConvertedTime(time);
+        TimeConverter.output_converted_time(time);
     }
     else
     {
         std::cout << "now input seconds -> ";
         std::cin >> seconds;
-        timeconverter.outputConvertedTime(seconds);
+        TimeConverter.output_converted_time(seconds);
     }
     return 0;
 }
